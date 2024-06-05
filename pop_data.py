@@ -12,7 +12,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 import numpy as np
 
 # j'importe les données, unidecode sur le titre pour la recherche sans accent, minuscule...
-df = pd.read_csv("dataframe2.csv", sep=',')
+df = pd.read_csv("https://raw.githubusercontent.com/TiphaineInData/recommandations_films/main/dataframe2.csv", sep=',')
 df['originalTitle_normalized'] = df['originalTitle'].apply(lambda x: unidecode(x.lower()))
 df_realisateurs = pd.read_csv("df_real_71.csv", sep=',')
 
