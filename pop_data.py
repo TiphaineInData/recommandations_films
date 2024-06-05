@@ -833,7 +833,7 @@ def login_page():
     )
 
     st.markdown('<div class="block-container">', unsafe_allow_html=True)
-    st.image('./back_connexion.jpg', use_column_width=True)
+    st.image('https://raw.githubusercontent.com/TiphaineInData/recommandations_films/main/back_connexion.jpg', use_column_width=True)
     st.title("Connexion")
     st.text("")
 
