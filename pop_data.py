@@ -14,7 +14,7 @@ import numpy as np
 # j'importe les données, unidecode sur le titre pour la recherche sans accent, minuscule...
 df = pd.read_csv("https://raw.githubusercontent.com/TiphaineInData/recommandations_films/main/dataframe2.csv", sep=',')
 df['originalTitle_normalized'] = df['originalTitle'].apply(lambda x: unidecode(x.lower()))
-df_realisateurs = pd.read_csv("df_real_71.csv", sep=',')
+df_realisateurs = pd.read_csv("https://raw.githubusercontent.com/TiphaineInData/recommandations_films/main/df_real_71.csv", sep=',')
 
 # je retire les stop words sur les 3 colonnes
 tfidf_overview = TfidfVectorizer(stop_words='english') 
@@ -680,13 +680,13 @@ def idees_page():
         st.session_state.new_sample_realisateurs = False
 
     if st.session_state.new_sample_realisateurs:
-        df_realisateurs = pd.read_csv("df_real_71.csv")
+        df_realisateurs = pd.read_csv("https://raw.githubusercontent.com/TiphaineInData/recommandations_films/main/df_real_71.csv.csv")
         sample_realisateurs = df_realisateurs.sample(8)
         st.session_state.sample_realisateurs = sample_realisateurs
         st.session_state.new_sample_realisateurs = False
     else:
         if 'sample_realisateurs' not in st.session_state:
-            df_realisateurs = pd.read_csv("df_real_71.csv")
+            df_realisateurs = pd.read_csv("https://raw.githubusercontent.com/TiphaineInData/recommandations_films/main/df_real_71.csv.csv")
             sample_realisateurs = df_realisateurs.sample(8)
             st.session_state.sample_realisateurs = sample_realisateurs
         else:
