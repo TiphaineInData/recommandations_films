@@ -307,7 +307,7 @@ def main_page():
 
     # En-tête avec l'image
     st.markdown('<div class="full-width-image">', unsafe_allow_html=True)
-    st.image('./back_main4.jpg', use_column_width=True)
+    st.image('https://raw.githubusercontent.com/TiphaineInData/recommandations_films/main/back_main4.jpg', use_column_width=True)
     st.markdown('</div>', unsafe_allow_html=True)
 
     # Bouton pour naviguer vers la page "Idées et indicateurs"
@@ -619,7 +619,7 @@ def idees_page():
 
     # En-tête avec l'image
     st.markdown('<div class="full-width-image">', unsafe_allow_html=True)
-    st.image('./back_main4.jpg', use_column_width=True)
+    st.image('https://raw.githubusercontent.com/TiphaineInData/recommandations_films/main/back_main4.jpg', use_column_width=True)
     st.markdown('</div>', unsafe_allow_html=True)
     
     # Bouton pour naviguer vers la page "Recommandations"
